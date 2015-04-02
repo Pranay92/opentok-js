@@ -8968,7 +8968,7 @@ OT.Raptor.Message.signals.create = function (apiKey, sessionId, toAddress, type,
           return;
       }
 
-      if (actors.length === 0 || !actors[0].session || !!actors[0].session.connections) return;
+      if (actors.length === 0 || !actors[0].session || !actors[0].session.connections) return;
 
       // This is a bit hacky. We don't have the session in the message so we iterate
       // until we find the actor that the message relates to this stream, and then
